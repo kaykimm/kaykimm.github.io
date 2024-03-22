@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(250, 242, 232);
+    max-width: 800px;
+    margin:auto;
+
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+}
+
+ img {
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+    border: border-width border-style border-color;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(165, 116, 116);
+    box-sizing: border-box;
+ }
+p {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.highlighted {
+    background-color: honeydew;
+    font-weight: bold;
+}
