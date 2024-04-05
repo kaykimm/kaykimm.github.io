@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drowning Love (溺れるナイフ)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url("Drowninglove.png");
+            background-repeat: no-repeat;
+            background-color: #000000;
+            background-size: cover;
+        }
+        
+        #message {
+            height: 100px;
+            width: 800px;
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            margin-left: -400px;
+            overflow-y: hidden;
+            text-align: center;
+            font-family: "Open Sans", Helvetica, Arial;
+            font-weight: bolder;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke: 1px black;
+            paint-order: stroke fill;
+            text-shadow: 2px 2px 2px #000000;
+        }
+        
+        #clicky {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            width: 800px;
+            height: 10px;
+            margin-left: -400px;
+            text-align: center;
+        }
+        
+        
+        #arrow {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2;
+            font-family: Helvetica;
+            font-weight: normal;
+            font-size: 24px;
+            opacity: .5;
+        }
+        
+        button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            text-decoration: underline;
+            padding: 0;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        a:link, a:visited {
+            text-decoration: underline;
+            color: white;
+        }
+    </style>
+    
+    <audio autoplay loop>
+        <source src="pianosong.mp3" type="audio/mpeg">
+    </audio>
+
+</head>
+<body>
+    <script>
+        var clicks = 0;
+        
+         function onClick() {
+           clicks += 1;
+           var message = "Drowning Love (溺れるナイフ)";
+           if(clicks==1)
+             { message = "Drowning Love (溺れるナイフ)";}
+        else if(clicks==2)
+           {message ="That Summer , I met you by the sacred sea";}
+        else if(clicks==3)
+           {message ="...";}
+        else if(clicks==4)
+             {message = "You said,";}
+        else if(clicks==5)
+             {message = "God allows me to play where I want. ";}
+        else if(clicks==6)
+             {message = "He's given this town to me.";}
+        else if(clicks==7)
+             {message = "We could go together wherever we want.";}
+        else if(clicks==8)
+             {message = "I said,";}
+        else if(clicks==9)
+             {message = "The sea and these mountains belong to you.";}
+        else if(clicks==10)
+             {message = "I, too belongs to you.";}
+        else if(clicks==11)
+             {message = "この海,も山も、こうちゃんのものだ!";}
+        else if(clicks==12)
+             {message = "もう二度 と戻 れない。";}
+        else if(clicks==13)
+             {message = "あの頃、君が世界 のすべてだった。";}
+        else if(clicks==14)
+             {message = "あの頃(ころ)、君 が世界(せかい)のすべてだった。";}
+        else if(clicks==15)
+             {message = "私も、こうちゃんのものなんだ!";}
+        else if(clicks==16)
+             {message = "あるはずのない永遠 を信(しん)じてた。";}
+        else if(clicks==17)
+             {message = "Sea,";}
+        else if(clicks==18)
+             {message = "Clouds,";}
+        else if(clicks==19)
+             {message = "Sun,";}
+        else if(clicks==20)
+             {message = "Moon,";}
+        else if(clicks==21)
+             {message = "Waves,";}
+        else if(clicks==22)
+             {message = "Rain,";}
+        else if(clicks==23)
+             {message = "Flowers,";}
+        else if(clicks==24)
+             {message = "Blink,";}
+        else if(clicks==25)
+             {message = "Hair,";}
+        else if(clicks==26)
+             {message = "Memories.";}
+        else if(clicks==27)
+             {message = "...";}
+        else if(clicks==28)
+             {message = "...";}
+        else if(clicks==29)
+             {message = "Information about the movie";}
+        else if(clicks==30)
+             {message = "...";}
+        else if(clicks==31)
+             {message = "Drowning Love (溺れるナイフ, Oboreru Knife) is a 2016 Japanese film";}
+        else if(clicks==32)
+             {message = "directed by Yūki Yamato";}
+        else if(clicks==33)
+             {message = "and based on the manga series of the same name by George Asakura.";}
+        else if(clicks==34)
+             {message = "The film calls to question sexuality, relationships (Natsume and Kou)";}
+        else if(clicks==35)
+             {message = "adult desires & roles assigned to members of society. ";}
+        else if(clicks==36)
+             {message = "The end considers what must occur when violence is used,";}
+        else if(clicks==37)
+             {message = "and the impact it has on others. ";}
+        else if(clicks==38)
+             {message = "...";}
+        else if(clicks==39)
+             {message = "Song: Chasing Kou";}
+        else if(clicks==40)
+             {message = "Image: Drowning Love";}
+        else if(clicks==41)
+             {message = "₊‧.°.⋆🫧•˚₊‧⋆. ";}
+        else if(clicks==42)
+             {message = "if you want more information";} 
+        else if(clicks==43)
+             {message = "go to this wiki website!";}
+        else if(clicks==44)
+             {message = ".";}
+           document.getElementById("message").innerHTML = message;
+             
+        
+         }; 
+            </script>
+    
+    <div id="message"></div>
+    <div id="clicky">
+        &nbsp;
+
+
+<button type="button" id="buttonclick" onclick="onClick()">click</button>
+<button type="button" id="buttonfeeling" onclick="location.href='myfeeling/index.html';">My feeling</button>
+<button type="button" id="buttonufeeling" onclick="location.href='yourfeeling/index.html';">Your feeling</button>
+<button type="button" id="buttonlink" onclick="location.href='link/index.html';">Link</button>
+
+
+
+  
+</body>
+</html>
