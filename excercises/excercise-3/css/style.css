@@ -1,7 +1,19 @@
+
+@font-face {
+    font-family:'Absans';
+src: url('../fonts/Absans-Regular.woff2')
+}
+
+h1{
+    font-family: "Bungee Spice", sans-serif;
+}
+
+
 body {
     background-color: rgb(250, 242, 232);
     max-width: 800px;
     margin:auto;
+    font-family:'Absans',sans-serif;
 
 }
 

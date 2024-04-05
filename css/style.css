@@ -1,0 +1,98 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@keyframes tracking {
+    0% {
+        letter-spacing: 0;
+    }
+
+
+   100% {
+    letter-spacing: 10px;
+   }
+}
+
+
+h1 {
+    animation: tracking 2s ease infinite alternate;
+}
+
+header {
+    flex-basis: 75%;
+    flex-grow: 1;
+    border: 1px solid rgb(76, 90, 58);
+    padding: 2rem;
+}
+
+main {
+   flex-basis: 100%;
+   flex-grow: 1;
+}
+section{
+    border: 1px solid blue;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    flex-basis: 100%;
+}
+ol {
+    list-style: none;
+    flex-basis: 100%;
+    margin: 0;
+    padding:0;
+    display: flex;
+}
+
+a{
+    display: inline-block;
+    border: 1px solid rgb(40, 51, 40);
+    padding: 2rem;
+}
+
+.example{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.header {
+    flex-basis: 100%;
+    background-color: beige;
+}
+
+.list-container {
+    flex-basis: 100%;
+    list-style: none;
+    padding:0%;
+    margin:0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.list-item {
+    background-color: rgb(214, 225, 181);
+    flex-basis: 4%;
+}
+
+li{
+    flex-basis: 50%;
+    background-color: bisque;
+    box-shadow: 10px 10px 5px rgb(60, 78, 41);
+
+    transition: all 1s ease;
+}
+
+li :hover {
+    background-color: gray;
+    color: white;
+    filter: hue-rotate(180deg);
+}
