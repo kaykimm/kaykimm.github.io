@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Because there is Christmas</title>
+
+    <audio autoplay loop>
+        <source src="01 Oneul - we wish you a merry christmas.mp3" type="audio/mpeg">
+    </audio>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url("반짝.png");
+            background-color: #102c01;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+
+        .gallery {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .image-container {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+        }
+
+        .image-container img {
+            width: 300px; /* Adjust width as desired */
+            height: auto;
+            margin-bottom: 5px;
+            border-radius: 8px; /* Optional: adds rounded corners to images */
+        }
+
+        .image-container .description {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: #fff;
+            padding: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+            border-radius: 0 0 8px 8px; /* Match image border-radius */
+        }
+
+        .image-container:hover .description {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        @keyframes fall {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+
+        .emoji {
+            font-size: 48px; /* Size of the emoji */
+            position: absolute;
+            animation: fall linear infinite; /* Adjust timing as needed */
+        }
+
+        .emoji:nth-child(odd) { 
+            animation-duration: 4.5s; /* Faster for odd numbered emojis */
+            left: calc(10% - 30px); /* Position adjustment for better spacing */
+        }
+        .emoji:nth-child(even) { 
+            animation-duration: 7s; /* Slower for even numbered emojis */
+            left: calc(20% - 30px); /* Position adjustment for better spacing */
+        }
+        
+        /* Increasing left positions for each additional emoji */
+        .emoji:nth-child(3) { left: calc(30% - 30px); }
+        .emoji:nth-child(4) { left: calc(40% - 30px); }
+        .emoji:nth-child(5) { left: calc(50% - 30px); }
+        .emoji:nth-child(6) { left: calc(60% - 30px); }
+        .emoji:nth-child(7) { left: calc(70% - 30px); }
+        .emoji:nth-child(8) { left: calc(80% - 30px); }
+        .emoji:nth-child(9) { left: calc(90% - 30px); }
+        .emoji:nth-child(10) { left: calc(100% - 30px); }
+        .emoji:nth-child(11) { left: calc(110% - 30px); }
+        .emoji:nth-child(12) { left: calc(120% - 30px); }
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <h2 style="color: #fff;">⋆⁺₊❅⋆ ⁺₊❆⋆ ࣪ Christmas ⋆⁺₊❅⋆ ⁺₊❆⋆࣪</h2>
+        <div class="image-container">
+            <img src="treee.png" alt="tree">
+            <div class="description">Christmas tree!</div>
+        </div>
+        <div class="image-container">
+            <img src="santa.png" alt="santa">
+            <div class="description">Pop up Christmas Card from bookstore</div>
+        </div>
+        <div class="image-container">
+            <img src="tj.png" alt="tj">
+            <div class="description">TJ's mini tree and snowman!</div>
+        </div>
+        <div class="image-container">
+            <img src="cookie.png" alt="cookie">
+            <div class="description">Gingerbread House in Brown Campus</div>
+        </div>
+        <div class="image-container">
+            <img src="cups.png" alt="cups">
+            <div class="description">Christmas Cups!☃︎</div>
+        </div>
+        <div class="image-container">
+            <img src="tjtree.png" alt="tjtree">
+            <div class="description">TJ's funny tree ☃︎</div>
+        </div>
+        <div class="image-container">
+            <img src="cup.png" alt="cup">
+            <div class="description">Preparing for this Christmas ⋆｡˚❆˚ ｡⋆</div>
+        </div>
+        <div class="image-container">
+            <img src="11ho1.png" alt="11ho1">
+            <div class="description">Tree with coffee ☕️ </div>
+        </div>
+    </div>
+
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+    <div class="emoji">🎄</div>
+
+
+</body>
+</html>

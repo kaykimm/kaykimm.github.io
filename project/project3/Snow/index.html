@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Because there is snow</title>
+    <audio autoplay loop>
+        <source src="15 Oneul - Jingle Bell.mp3" type="audio/mpeg">
+    </audio>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url("어린나.JPG");
+            background-color: #dbe2e6;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+
+        .gallery {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .image-container {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+        }
+
+        .image-container img {
+            width: 300px; /* Adjust width as desired */
+            height: auto;
+            margin-bottom: 5px;
+            border-radius: 8px; /* Optional: adds rounded corners to images */
+        }
+
+        .image-container .description {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: #fff;
+            padding: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+            border-radius: 0 0 8px 8px; /* Match image border-radius */
+        }
+
+        .image-container:hover .description {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        @keyframes fall {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+
+        .emoji {
+            font-size: 48px; /* Size of the emoji */
+            position: absolute;
+            animation: fall linear infinite; /* Adjust timing as needed */
+        }
+
+        .emoji:nth-child(odd) { 
+            animation-duration: 4.5s; /* Faster for odd numbered emojis */
+            left: calc(10% - 30px); /* Position adjustment for better spacing */
+        }
+        .emoji:nth-child(even) { 
+            animation-duration: 6s; /* Slower for even numbered emojis */
+            left: calc(20% - 30px); /* Position adjustment for better spacing */
+        }
+        
+        /* Increasing left positions for each additional emoji */
+        .emoji:nth-child(3) { left: calc(30% - 30px); }
+        .emoji:nth-child(4) { left: calc(40% - 30px); }
+        .emoji:nth-child(5) { left: calc(50% - 30px); }
+        .emoji:nth-child(6) { left: calc(60% - 30px); }
+        .emoji:nth-child(7) { left: calc(70% - 30px); }
+        .emoji:nth-child(8) { left: calc(80% - 30px); }
+        .emoji:nth-child(9) { left: calc(90% - 30px); }
+        .emoji:nth-child(10) { left: calc(100% - 30px); }
+        .emoji:nth-child(11) { left: calc(110% - 30px); }
+        .emoji:nth-child(12) { left: calc(120% - 30px); }
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <h2 style="color: #d8d5d5;">⋆⁺₊❅⋆ ⁺₊❆⋆ ࣪ SNOW ⋆⁺₊❅⋆ ⁺₊❆⋆࣪</h2>
+        <div class="image-container">
+            <img src="15West.png" alt="15West">
+            <div class="description">Infront of the 15 West!</div>
+        </div>
+        <div class="image-container">
+            <img src="Mesnowman.png" alt="Mesnowman">
+            <div class="description">I hope this snowman can listen this music ☃︎</div>
+        </div>
+        <div class="image-container">
+            <img src="뒷모습.png" alt="뒷모습">
+            <div class="description">Making snowman with my dog!</div>
+        </div>
+        <div class="image-container">
+            <img src="소화기.png" alt="소화기">
+            <div class="description">Cute Fireplug with snow</div>
+        </div>
+        <div class="image-container">
+            <img src="고딩.png" alt="고딩">
+            <div class="description">Making snowman with my dog!☃︎</div>
+        </div>
+        <div class="image-container">
+            <img src="Snowman.png" alt="Snowman">
+            <div class="description">I hope you had the best winter ☃︎</div>
+        </div>
+        <div class="image-container">
+            <img src="Tree.png" alt="Tree">
+            <div class="description">Trees with snow friends ⋆｡˚❆˚ ｡⋆</div>
+        </div>
+        <div class="image-container">
+            <img src="snowduck.png" alt="snowduck">
+            <div class="description">Snow Duckssssss</div>
+        </div>
+    </div>
+
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+    <div class="emoji">❄️</div>
+
+
+</body>
+</html>

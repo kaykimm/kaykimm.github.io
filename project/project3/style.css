@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Save";
+    src: url('https://mbelgrod.github.io/projects/project-2/Save.ttf') format('truetype');
+}
+
+img {
+	width: 100%;
+	display: inline-block;
+	/* border: 1px solid black; */
+	/* padding: 1rem; */
+	/* box-sizing: border-box; */
+	transition: 1s;
+}
+
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+ol ol {
+	padding-left: 2rem;
+}

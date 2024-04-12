@@ -91,7 +91,7 @@ li{
     transition: all 1s ease;
 }
 
-li :hover {
+li:hover{
     background-color: gray;
     color: white;
     filter: hue-rotate(180deg);
