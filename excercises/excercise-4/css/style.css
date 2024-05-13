@@ -1,0 +1,126 @@
+
+:root {
+    --bg-color:rgb(255, 182, 182);
+    --text-color:black;
+    --primary-color: red;
+    --secondary-color: blue;
+}
+
+
+/*
+-------------------------------
+fonts
+-------------------------------
+*/
+
+
+@font-face {
+    font-family:'Absans';
+src: url('../fonts/Absans-Regular.woff2')
+}
+
+h1{
+    font-family: "Bungee Spice", sans-serif;
+}
+
+h2{
+    color: var(--secondary-color);
+}
+body {
+    background-color:var(--bg-color);
+    color: var(--text-color);
+    font-family:'Absans',sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+
+body.light {
+    background: lightgoldenrodyellow;
+    color: darkblue
+}
+
+body.dark {
+    background: darkblue;
+    color: lightgoldenrodyellow
+}
+
+
+main{
+    flex-grow: 1;
+    margin-left: 300px;
+    padding: 1rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+nav{
+    padding: 1rem;
+    border-bottom: 1px dashed darkblue; 
+    border-right: 1px dashed darkblue;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5rem;
+    width: 300;
+ 
+
+    }
+
+ img {
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+    border: border-width border-style border-color;
+    border-width: 2px;
+ }
+
+
+p {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.highlighted {
+    background-color: honeydew;
+    font-weight: bold;
+}
+
+.navigation {
+    color: blueviolet;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.2rem;
+    width: 18rem;
+    margin: 0;
+}
+
+.navigation ol {
+    list-style: none;
+}
+
+.navigation__secondary {
+    padding-left: 1rem;
+}
+
+
+@media screen and (min-width: 500px){
+    
+    .navigation {
+        display: block;
+        order: 1;
+        position: sticky;
+        top: 1rem;
+        align-items: flex-start;
+
+    }
+
+   main{
+    order:2;
+    flex-basis: 100% - 200px;
+
+   }
+}
+
+

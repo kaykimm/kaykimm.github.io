@@ -1,0 +1,24 @@
+.speech-bubble a {
+    display: inline-block;
+    padding: 6px 9px;
+    color: white;
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 4px; /* Rounded corners for the buttons */
+    text-align: center;
+}
+
+#bubble1 a {
+    background-color: rgb(69, 37, 19); /* Color for first button */
+}
+
+#bubble2 a {
+    background-color: green; /* Color for second button */
+}
+
+#bubble3 a {
+    background-color: rgb(255, 184, 17); /* Color for third button */
+}
+
+#bubble4 a {
+    background-color: rgb(159,198,230); /* Color for fourth button */
+}
