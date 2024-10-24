@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Finder Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .icon {
+            position: absolute;
+        }
+        /* Light mode (default) */
+        body.light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        /* Dark mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        #toggle-mode {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #toggle-mode:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <h1>Find the AI!</h1>
+    <button id="toggle-mode">Dark Mode</button>
+    <div id="game-board"></div>
+
+    <script>
+        const numIcons = 15;
+        const gameBoard = document.getElementById('game-board');
+        const toggleButton = document.getElementById('toggle-mode');
+
+        function createIcons() {
+            for (let i = 0; i < numIcons; i++) {
+                const icon = document.createElement('div');
+                icon.classList.add('icon');
+                icon.textContent = '🧑🏻‍🦱';
+                gameBoard.appendChild(icon);
+            }
+        }
+
+        function randomPosition(element) {
+            const maxX = window.innerWidth - element.clientWidth;
+            const maxY = window.innerHeight - element.clientHeight;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+            element.style.left = `${randomX}px`;
+            element.style.top = `${randomY}px`;
+        }
+
+        function startMovingIcons() {
+            const icons = document.querySelectorAll('.icon');
+            const directions = Array.from(icons).map(() => ({
+                x: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 2 + 1),
+                y: (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 2 + 1),
+            }));
+
+            icons.forEach((icon, index) => {
+                randomPosition(icon);
+                setInterval(() => moveIcon(icon, index), 16);
+
+                icon.addEventListener('click', () => {
+                    alert(index === 0 ? 'You found the AI!' : 'Not the AI!');
+                });
+            });
+
+            function moveIcon(icon, index) {
+                const rect = icon.getBoundingClientRect();
+                const maxX = window.innerWidth - icon.clientWidth;
+                const maxY = window.innerHeight - icon.clientHeight;
+
+                let left = parseFloat(icon.style.left) + directions[index].x;
+                let top = parseFloat(icon.style.top) + directions[index].y;
+
+                if (left <= 0 || left >= maxX) {
+                    directions[index].x *= -1;
+                }
+                if (top <= 0 || top >= maxY) {
+                    directions[index].y *= -1;
+                }
+
+                icon.style.left = `${Math.max(0, Math.min(left, maxX))}px`;
+                icon.style.top = `${Math.max(0, Math.min(top, maxY))}px`;
+            }
+        }
+
+        // Function to toggle dark and light modes
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+        });
+
+        // Initialize the game
+        createIcons();
+        startMovingIcons();
+    </script>
+</body>
+</html>
