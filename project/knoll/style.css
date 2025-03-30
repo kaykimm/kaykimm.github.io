@@ -1,0 +1,15 @@
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 140px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('logo-16.png'); /* 다크 모드용 로고 */
+  }
+  
+  .light-mode .logo {
+    background-image: url('logo-13.png'); /* 라이트 모드용 로고 */
+  }

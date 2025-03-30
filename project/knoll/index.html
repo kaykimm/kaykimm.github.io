@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Carousel Final</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ohl6xwv.css" />
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+      --panel-bg: #fff;
+      --panel-text: #000;
+    }
+    body {
+      margin: 0;
+      background: var(--bg-color);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      perspective: 2000px;
+      font-family: sans-serif;
+      color: var(--text-color);
+    }
+    .carousel {
+      position: relative;
+      width: 420px;
+      height: 500px;
+      transform-style: preserve-3d;
+      transition: transform 1s ease-in-out;
+    }
+    .panel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: none;
+      transform-style: preserve-3d;
+    }
+    .panel-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease-in-out;
+      transform: rotateY(0deg);
+    }
+    .panel-inner.flipped {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 24px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+    .front {
+      background: var(--panel-bg);
+      color: var(--panel-text);
+      transform: rotateY(180deg);
+    }
+    .back {
+  background: #eee;
+  padding: 0;         
+  border: none;      
+}
+
+    .front h1 {
+      font-family: Helvetica, sans-serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .caption {
+      font-family: Helvetica, sans-serif;
+      font-size: 0.6rem;
+      color: #666;
+      margin-bottom: 16px;
+    }
+    .body {
+      font-family: "freighttextcmp-pro", serif;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: inherit;
+    }
+    .see-more {
+      font-size: 0.7rem;
+      color: #666;
+      font-style: italic;
+      align-self: flex-end;
+      margin-top: auto;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .see-more:hover {
+      text-decoration: underline;
+      color: #333;
+    }
+    .panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  display: block;
+}
+
+
+    .resources {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: Helvetica, sans-serif;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+    .toggle-mode {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: Helvetica, sans-serif;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .toggle-mode:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+    .light-mode {
+      --bg-color: #fff;
+      --text-color: #000;
+      --panel-bg: #000;
+      --panel-text: #fff;
+    }
+  
+    .light-mode .resources,
+    .light-mode .toggle-mode {
+      color: #000;
+    }
+    .light-mode .resources:hover,
+    .light-mode .toggle-mode:hover {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo"></div>
+  <div class="resources">resources</div>
+  <div class="toggle-mode" id="toggle-mode">light on</div>
+  <div class="carousel" id="carousel">
+    
+    <div class="panel" style="transform: rotateY(0deg) translateZ(350px);">
+      <div class="panel-inner">
+        <div class="front">
+          <div><h1>Why Creativity is a Team Sport</h1><div class="caption">k. talks Insights</div><div class="body">Speaking at a Knoll k. talk, Baer, a professor of organizational behavior at Olin Business School at Washington University in St. Louis, shared research to show that more often than not, creativity is a team sport. Using academic research featuring examples from the worlds of technology and entertainment, Baer debunked four common myths on how creativity happens among knowledge workers.</div></div>
+          <div class="see-more">see more ></div>
+        </div>
+        <div class="back"><img src="image1.jpg" alt="Image 1" /></div>
+      </div>
+    </div>
+    
+    <div class="panel" style="transform: rotateY(72deg) translateZ(350px);">
+      <div class="panel-inner">
+        <div class="front">
+          <div><h1>Generation Z: Life in the Covid Era</h1><div class="caption">k. talks Insights</div><div class="body">As they are being welcomed back to campus for in-person learning and living after 18 to 24 months of pandemic-imposed remote experiences, today’s college students are not shy about expressing their priorities for their campus experience. But they do face numerous challenges in the process. The good news: colleges and universities are planning spaces, programming and support to help them thrive, according to a panel of higher education and Gen Z experts at a recent Knoll k. talk.</div></div>
+          <div class="see-more">see more ></div>
+        </div>
+        <div class="back"><img src="image2.jpg" alt="Image 2" /></div>
+      </div>
+    </div>
+    
+    <div class="panel" style="transform: rotateY(144deg) translateZ(350px);">
+      <div class="panel-inner">
+        <div class="front">
+          <div><h1>Reimagining the Academic Work Environment</h1><div class="caption">k. talks Insights</div><div class="body">Higher education institutions recognize and value the importance of the work environment for faculty and staff, as well as the amount of campus space devoted to this function. Yet moving away from the traditional private office model—typically an underutilized asset—is a complex proposition. Competing perspectives and space limitations make it challenging to change the office status quo. This white paper explores how to design and plan faculty offices and campus workspaces that align with instructor and student needs while fulfilling institutional objectives. This paper also stresses the importance of implementing change management practices in the process.</div></div>
+          <div class="see-more">see more ></div>
+        </div>
+        <div class="back"><img src="image3.jpg" alt="Image 3" /></div>
+      </div>
+    </div>
+    
+    <div class="panel" style="transform: rotateY(216deg) translateZ(350px);">
+      <div class="panel-inner">
+        <div class="front">
+          <div><h1>The Case for a Thriving Workplace</h1><div class="caption">k. talks Insights</div><div class="body">This study presents compelling evidence that workforce performance and well-being considerations are largely driving the form and use of the future workplace and emphasize the need to support business continuity strategies through flexibility. This will be matched with a shift in the design of office space to a more casual look and feel. Related to supporting workforce needs and flexibility, we found that remote work is here to stay. When employees do use the future office, the primary intent is for creative group interactions rather than rote meetings or focus work. On the other hand, work from home is clearly not the answer to everything since it does not support creative brainstorming or nurturing important social networks. Thus, in the future office, we expect a significant reduction in the proportion of individual to group spaces within the office, especially with larger companies.</div></div>
+          <div class="see-more">see more ></div>
+        </div>
+        <div class="back"><img src="image4.jpg" alt="Image 4" /></div>
+      </div>
+    </div>
+    
+    <div class="panel" style="transform: rotateY(288deg) translateZ(350px);">
+      <div class="panel-inner">
+        <div class="front">
+          <div><h1>Hybrid Work Series: Navigating Remote Work</h1><div class="caption">k. talks Insights</div><div class="body">Remote work is not a new concept. But nonetheless, when the majority of the country moved to remote work within a matter days in March of 2020, the ground beneath the feet of the traditional in-office employee—and the occasional remote worker—shifted dramatically. Companies quickly sprang to action by creating experimental work setups; there was widespread conversion from in-person to virtual meetings and corporate functions; and suddenly, a vast body of managers were no longer face-to-face with their staffs.</div></div>
+          <div class="see-more">see more ></div>
+        </div>
+        <div class="back"><img src="image5.jpg" alt="Image 5" /></div>
+      </div>
+    </div>
+    
+  </div>
+  <script>
+    let rotation = 0;
+    const carousel = document.getElementById('carousel');
+    let isScrolling = false;
+    window.addEventListener('wheel', (e) => {
+      if (!isScrolling) {
+        isScrolling = true;
+        const direction = e.deltaY > 0 || e.deltaX > 0 ? -72 : 72;
+        rotation += direction;
+        carousel.style.transform = `rotateY(${rotation}deg)`;
+        setTimeout(() => { isScrolling = false; }, 1200);
+      }
+    });
+    document.querySelectorAll('.panel').forEach(panel => {
+      panel.addEventListener('click', () => {
+        panel.querySelector('.panel-inner').classList.toggle('flipped');
+      });
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      const inners = document.querySelectorAll('.panel-inner');
+      inners.forEach((inner, index) => {
+        setTimeout(() => {
+          inner.classList.add('flipped');
+        }, 800 + index * 150);
+      });
+    });
+    const toggleBtn = document.getElementById('toggle-mode');
+    const body = document.body;
+    let lightOn = false;
+    toggleBtn.addEventListener('click', () => {
+      lightOn = !lightOn;
+      body.classList.toggle('light-mode');
+      toggleBtn.textContent = lightOn ? 'light off' : 'light on';
+    });
+  </script>
+</body>
+</html>
