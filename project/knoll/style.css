@@ -13,3 +13,46 @@
   .light-mode .logo {
     background-image: url('logo-13.png'); /* 라이트 모드용 로고 */
   }
+
+  .nav {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1000;
+  }
+  
+  .nav div {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .nav div:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+  
+  .light-mode .nav {
+    color: #000;
+  }
+  
+  .light-mode .nav div:hover {
+    color: #666;
+  }
+  
+  .nav .highlighted {
+    font-style: italic;
+    color: #888;
+    text-decoration: underline;
+    pointer-events: none; /* 선택 불가 (선택 사항) */
+  }
+  
+  .light-mode .nav .highlighted {
+    color: #aaa;
+  }
